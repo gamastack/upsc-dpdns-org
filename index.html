@@ -1,71 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Page</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UPSC Prep — Premier Coaching</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="description" content="UPSC entrance coaching — courses, mentorship, and test series." />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="#home">UPSC Prep</a>
+        <nav class="main-nav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#courses" class="nav-link">Courses</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a class="cta" href="#contact">Enroll</a>
+      </div>
+    </header>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      text-align: center;
-      padding: 3rem 1.5rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #ffffff;
-      color: #171717;
-    }
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>Crack UPSC with Confidence</h1>
+            <p class="lead">Expert faculty, personalised mentorship, and a proven test series — all in one place.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#courses">View Courses</a>
+              <a class="btn ghost" href="#about">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="stats">
+              <div>
+                <h3>120+</h3>
+                <p>Live Classes</p>
+              </div>
+              <div>
+                <h3>5000+</h3>
+                <p>Study Materials</p>
+              </div>
+              <div>
+                <h3>95%</h3>
+                <p>Success Rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    h1 {
-      font-size: 2.5rem;
-      color: #16a34a;
-      margin: 0;
-    }
+      <section id="courses" class="section">
+        <div class="container">
+          <h2 class="section-title">Our Courses</h2>
+          <p class="section-sub">Flexible batches, weekend classes, and intensive test-series.</p>
+          <div class="cards">
+            <article class="card">
+              <h3>Foundation Program</h3>
+              <p>Start your preparation with a strong base in history, polity and geography.</p>
+              <a class="card-cta" href="#contact">Enroll</a>
+            </article>
+            <article class="card">
+              <h3>Advanced Program</h3>
+              <p>Deep dives, optional subjects, and answer-writing practice.</p>
+              <a class="card-cta" href="#contact">Enroll</a>
+            </article>
+            <article class="card">
+              <h3>Test Series</h3>
+              <p>Timed mocks with personalised feedback and performance reports.</p>
+              <a class="card-cta" href="#contact">Enroll</a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    p {
-      font-size: 1.1rem;
-      color: #6b7280;
-      max-width: 32rem;
-      margin: 0;
-    }
+      <section id="about" class="section alt">
+        <div class="container">
+          <h2 class="section-title">About Us</h2>
+          <div class="about-grid">
+            <p>
+              We are a team of educators with a mission to make UPSC preparation structured,
+              accessible and results-driven. Our curriculum is updated annually and guided by
+              experienced mentors.
+            </p>
+            <ul>
+              <li>Personal mentorship</li>
+              <li>Small batch sizes</li>
+              <li>Regular performance tracking</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    .details {
-      border: 1px solid #e5e7eb;
-      border-radius: 0.5rem;
-      padding: 1rem 1.5rem;
-      font-size: 0.9rem;
-      color: #4b5563;
-      text-align: left;
-    }
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-grid">
+            <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Thanks! We will contact you soon.');">
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4"></textarea>
+              </label>
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+              <p><strong>Email:</strong> info@upscprep.example</p>
+              <p><strong>Phone:</strong> +91 98765 43210</p>
+              <p><strong>Address:</strong> 123 Learning Lane, City</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    .details p {
-      margin: 0.25rem 0;
-      font-size: inherit;
-      color: inherit;
-    }
-  </style>
-</head>
-<body>
-  <h1>✅ It's working!</h1>
-  <p>
-    If you can see this page, Cloudflare is serving your static files correctly.
-  </p>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> UPSC Prep. All rights reserved.</p>
+        <div class="social">
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
 
-  <div class="details">
-    <p><strong>File:</strong> index.html</p>
-    <p><strong>Loaded at:</strong> <span id="loaded-at"></span></p>
-  </div>
+    <script>
+      // set year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  <script>
-    document.getElementById("loaded-at").textContent = new Date().toLocaleString();
-  </script>
-</body>
+      // smooth nav active state
+      document.querySelectorAll('.main-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelectorAll('.main-nav .nav-link').forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+    </script>
+  </body>
 </html>
