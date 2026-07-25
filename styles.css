@@ -1,0 +1,81 @@
+:root{
+  --bg:#0f172a;
+  --card:#0b1220;
+  --accent:#06b6d4;
+  --muted:#9ca3af;
+  --glass: rgba(255,255,255,0.04);
+  --max-width:1100px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+  background:linear-gradient(180deg,#071022 0%, #071a2b 60%);
+  color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.nav-row{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.25rem}
+.main-nav{display:flex;gap:0.75rem}
+.nav-link{color:var(--muted);text-decoration:none;padding:0.5rem 0.6rem;border-radius:8px;transition:all .25s}
+.nav-link:hover{color:#fff;background:var(--glass);transform:translateY(-2px)}
+.nav-link.active{color:#fff;background:linear-gradient(90deg,rgba(6,182,212,0.14),rgba(99,102,241,0.08));box-shadow:0 6px 18px rgba(6,182,212,0.06)}
+.cta{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041025;padding:0.55rem 0.9rem;border-radius:10px;text-decoration:none;font-weight:600}
+
+.hero{padding:4rem 0;background:linear-gradient(180deg,rgba(6,182,212,0.03),transparent)}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.hero h1{font-size:2.2rem;margin:0 0 0.5rem;color:#ffffff}
+.lead{color:var(--muted);margin-bottom:1rem}
+.hero-actions{display:flex;gap:0.75rem}
+.btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.primary{background:var(--accent);color:#042027}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.stats{display:flex;gap:1rem;justify-content:space-between}
+.stats h3{margin:0;font-size:1.4rem;color:#fff}
+.stats p{margin:0;color:var(--muted);font-size:0.9rem}
+
+.section{padding:3.25rem 0}
+.section-title{font-size:1.4rem;margin:0 0 0.25rem}
+.section-sub{color:var(--muted);margin-bottom:1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card);padding:1.25rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .22s,box-shadow .22s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(2,6,23,0.6)}
+.card h3{margin:0 0 0.5rem}
+.card p{color:var(--muted);margin:0 0 1rem}
+.card-cta{text-decoration:none;color:var(--accent);font-weight:700}
+
+.alt{background:linear-gradient(180deg,transparent,rgba(255,255,255,0.01))}
+.about-grid{display:grid;grid-template-columns:1fr 280px;gap:1.25rem;align-items:start}
+.about-grid ul{color:var(--muted);margin:0;padding-left:1rem}
+
+.contact-section .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem}
+.contact-form{display:flex;flex-direction:column;gap:0.6rem}
+.contact-form label{display:flex;flex-direction:column;color:var(--muted);font-size:0.95rem}
+.contact-form input,.contact-form textarea{margin-top:0.5rem;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+
+.footer-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+.social a{color:var(--muted);text-decoration:none;margin-left:0.75rem}
+
+@media (max-width:880px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .nav-row{gap:0.5rem}
+  .main-nav{display:none}
+}
+
+@media (max-width:480px){
+  .container{padding:1rem}
+  .hero h1{font-size:1.6rem}
+}
+
+/* subtle entrance animation */
+section{opacity:0;transform:translateY(10px);animation:fadeUp .6s ease forwards;animation-delay:.08s}
+section:nth-of-type(2){animation-delay:.12s}
+section:nth-of-type(3){animation-delay:.16s}
+section:nth-of-type(4){animation-delay:.2s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
